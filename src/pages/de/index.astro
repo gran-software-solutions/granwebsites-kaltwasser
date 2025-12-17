@@ -72,9 +72,7 @@ const logos = [
             }
         </style>
     </head>
-    <body
-        class="bg-slate-50 text-slate-900 antialiased selection:bg-brand-blue selection:text-white"
-    >
+    <body class="bg-slate-100 text-slate-900 antialiased">
         <!-- Mobile Navigation Overlay (Hidden by default) -->
         <div
             id="mobile-menu"
@@ -168,7 +166,7 @@ const logos = [
 
                         <a
                             href="#kontakt"
-                            class="px-5 py-2.5 bg-brand-dark text-white rounded-full hover:bg-brand-blue transition-colors text-sm font-semibold"
+                            class="px-5 py-2.5 bg-brand-dark text-gray-900 rounded-full hover:bg-brand-blue transition-colors text-sm font-semibold"
                         >
                             Kontakt aufnehmen
                         </a>
@@ -205,8 +203,7 @@ const logos = [
                     <div
                         class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold uppercase tracking-wider"
                     >
-                        <span
-                            class="w-2 h-2 rounded-full bg-white animate-ping"
+                        <span class="w-2 h-2 rounded-full bg-white animate-ping"
                         ></span>
                         Seit 1990
                     </div>
@@ -500,121 +497,132 @@ const logos = [
         </section>
 
         <!-- Featured Projects (Horizontal Scroll Concept) -->
-        <section id="projekte" class="py-24 bg-slate-50 overflow-hidden">
+        <section id="projekte" class="py-24 bg-slate-50 overflow-hidden pb-12">
             <div
                 class="max-w-7xl mx-auto px-6 mb-12 flex items-end justify-between"
             >
-                <div>
-                    <span
-                        class="text-brand-blue font-semibold uppercase tracking-wider text-sm"
-                        >Case Studies</span
-                    >
-                    <h2 class="text-4xl font-bold text-brand-dark mt-2">
-                        Aktuelle Arbeiten
-                    </h2>
-                </div>
-                <div class="hidden md:flex gap-2">
-                    <button
-                        class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all"
-                        ><i data-lucide="arrow-left" class="w-5 h-5"
-                        ></i></button
-                    >
-                    <button
-                        class="w-12 h-12 rounded-full border border-gray-800 bg-brand-dark text-white flex items-center justify-center hover:bg-gray-700 transition-all"
-                        ><i data-lucide="arrow-right" class="w-5 h-5"
-                        ></i></button
-                    >
+                <div class="w-full">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <span
+                                class="text-brand-blue font-semibold uppercase tracking-wider text-sm"
+                                >Case Studies</span
+                            >
+                            <h2 class="text-4xl font-bold text-brand-dark mt-2">
+                                Aktuelle Arbeiten
+                            </h2>
+                        </div>
+                        <div class="hidden md:flex gap-2">
+                            <button
+                                id="prev-project"
+                                class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all"
+                                ><i
+                                    data-lucide="arrow-left"
+                                    class="w-5 h-5 text-gray-800"></i></button
+                            >
+                            <button
+                                id="next-project"
+                                class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all"
+                                ><i
+                                    data-lucide="arrow-right"
+                                    class="w-5 h-5 text-gray-800"></i></button
+                            >
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div
-                class="flex overflow-x-auto gap-8 px-6 pb-12 snap-x max-w-7xl mx-auto scrollbar-hide"
-            >
-                <!-- Project 1 -->
-                <div class="min-w-[85vw] md:min-w-[500px] snap-center">
-                    <div
-                        class="group relative rounded-2xl overflow-hidden aspect-[4/3] mb-6"
-                    >
-                        <img
-                            src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Energy Grid"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
+            <div class="relative max-w-7xl mx-auto">
+                <div
+                    id="projects-container"
+                    class="flex overflow-x-auto gap-8 px-6 snap-x scroll-smooth scrollbar-hide"
+                >
+                    <!-- Project 1 -->
+                    <div class="min-w-[85vw] md:min-w-[500px] snap-center">
                         <div
-                            class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"
+                            class="group relative rounded-2xl overflow-hidden aspect-[4/3] mb-6"
                         >
+                            <img
+                                src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Energy Grid"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div
+                                class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"
+                            >
+                            </div>
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide"
+                            >
+                                50Hertz
+                            </div>
                         </div>
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide"
+                        <h3
+                            class="text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition-colors"
                         >
-                            50Hertz
-                        </div>
+                            Klarheit im Netzausbau
+                        </h3>
+                        <p class="text-gray-600 line-clamp-2">
+                            Strategische Beratung und Konfliktmoderation für den
+                            Übertragungsnetzbetreiber. Transparenz schafft
+                            Akzeptanz.
+                        </p>
                     </div>
-                    <h3
-                        class="text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition-colors"
-                    >
-                        Klarheit im Netzausbau
-                    </h3>
-                    <p class="text-gray-600 line-clamp-2">
-                        Strategische Beratung und Konfliktmoderation für den
-                        Übertragungsnetzbetreiber. Transparenz schafft
-                        Akzeptanz.
-                    </p>
-                </div>
 
-                <!-- Project 2 -->
-                <div class="min-w-[85vw] md:min-w-[500px] snap-center">
-                    <div
-                        class="group relative rounded-2xl overflow-hidden aspect-[4/3] mb-6"
-                    >
-                        <img
-                            src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Modern wooden skyscraper"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
+                    <!-- Project 2 -->
+                    <div class="min-w-[85vw] md:min-w-[500px] snap-center">
                         <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide"
+                            class="group relative rounded-2xl overflow-hidden aspect-[4/3] mb-6"
                         >
-                            UmweltBank
+                            <img
+                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Modern wooden skyscraper"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide"
+                            >
+                                UmweltBank
+                            </div>
                         </div>
+                        <h3
+                            class="text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition-colors"
+                        >
+                            Ein Holzhochhaus als PR-Leuchtturm
+                        </h3>
+                        <p class="text-gray-600 line-clamp-2">
+                            Bundesweite Medienpräsenz für den nachhaltigen
+                            Firmensitz. Storytelling, das die Marke stärkt.
+                        </p>
                     </div>
-                    <h3
-                        class="text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition-colors"
-                    >
-                        Ein Holzhochhaus als PR-Leuchtturm
-                    </h3>
-                    <p class="text-gray-600 line-clamp-2">
-                        Bundesweite Medienpräsenz für den nachhaltigen
-                        Firmensitz. Storytelling, das die Marke stärkt.
-                    </p>
-                </div>
 
-                <!-- Project 3 -->
-                <div class="min-w-[85vw] md:min-w-[500px] snap-center">
-                    <div
-                        class="group relative rounded-2xl overflow-hidden aspect-[4/3] mb-6"
-                    >
-                        <img
-                            src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Convention"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
+                    <!-- Project 3 -->
+                    <div class="min-w-[85vw] md:min-w-[500px] snap-center">
                         <div
-                            class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide"
+                            class="group relative rounded-2xl overflow-hidden aspect-[4/3] mb-6"
                         >
-                            Bayernwerk
+                            <img
+                                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Convention"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-wide"
+                            >
+                                Bayernwerk
+                            </div>
                         </div>
+                        <h3
+                            class="text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition-colors"
+                        >
+                            Dialog Digital
+                        </h3>
+                        <p class="text-gray-600 line-clamp-2">
+                            Konzeption und Umsetzung von
+                            Online-Bürgerinformationsformaten während des
+                            Leitungsumbaus.
+                        </p>
                     </div>
-                    <h3
-                        class="text-2xl font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition-colors"
-                    >
-                        Dialog Digital
-                    </h3>
-                    <p class="text-gray-600 line-clamp-2">
-                        Konzeption und Umsetzung von
-                        Online-Bürgerinformationsformaten während des
-                        Leitungsumbaus.
-                    </p>
                 </div>
             </div>
         </section>
@@ -635,7 +643,10 @@ const logos = [
                         </p>
 
                         <div class="space-y-6">
-                            <div class="flex items-start gap-4">
+                            <a
+                                href="/de/kontakt/nuernberg/"
+                                class="flex items-start gap-4"
+                            >
                                 <div
                                     class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center shrink-0 text-brand-blue"
                                 >
@@ -651,8 +662,11 @@ const logos = [
                                         Zentrale an der Lorenzkirche
                                     </p>
                                 </div>
-                            </div>
-                            <div class="flex items-start gap-4">
+                            </a>
+                            <a
+                                href="/de/kontakt/muenchen/"
+                                class="flex items-start gap-4"
+                            >
                                 <div
                                     class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center shrink-0 text-brand-blue"
                                 >
@@ -668,8 +682,11 @@ const logos = [
                                         City-Büro Kaufingerstraße
                                     </p>
                                 </div>
-                            </div>
-                            <div class="flex items-start gap-4">
+                            </a>
+                            <a
+                                href="/de/kontakt/berlin/"
+                                class="flex items-start gap-4"
+                            >
                                 <div
                                     class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center shrink-0 text-brand-blue"
                                 >
@@ -685,7 +702,7 @@ const logos = [
                                         Hauptstadtbüro Charlottenburg
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="relative">
@@ -938,6 +955,54 @@ const logos = [
 
                     // Initial check
                     updateCarouselButtons();
+                }
+
+                // Projects Carousel
+                const projectsContainer =
+                    document.getElementById("projects-container");
+                if (projectsContainer) {
+                    const prevButton = document.getElementById("prev-project");
+                    const nextButton = document.getElementById("next-project");
+
+                    const updateProjectButtons = () => {
+                        const atStart = projectsContainer.scrollLeft < 10;
+                        const atEnd =
+                            projectsContainer.scrollLeft +
+                                projectsContainer.clientWidth >=
+                            projectsContainer.scrollWidth - 10;
+                        prevButton.disabled = atStart;
+                        nextButton.disabled = atEnd;
+                    };
+
+                    nextButton.addEventListener("click", () => {
+                        const projectWidth =
+                            projectsContainer.querySelector(
+                                ".snap-center",
+                            ).clientWidth;
+                        projectsContainer.scrollBy({
+                            left: projectWidth + 32, // (32 = gap)
+                            behavior: "smooth",
+                        });
+                    });
+
+                    prevButton.addEventListener("click", () => {
+                        const projectWidth =
+                            projectsContainer.querySelector(
+                                ".snap-center",
+                            ).clientWidth;
+                        projectsContainer.scrollBy({
+                            left: -(projectWidth + 32),
+                            behavior: "smooth",
+                        });
+                    });
+
+                    projectsContainer.addEventListener(
+                        "scroll",
+                        updateProjectButtons,
+                        { passive: true },
+                    );
+
+                    updateProjectButtons();
                 }
             });
 

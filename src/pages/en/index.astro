@@ -72,9 +72,7 @@ const logos = [
             }
         </style>
     </head>
-    <body
-        class="bg-slate-50 text-slate-900 antialiased selection:bg-brand-blue selection:text-white"
-    >
+    <body class="bg-slate-100 text-slate-900 antialiased">
         <!-- Mobile Navigation Overlay (Hidden by default) -->
         <div
             id="mobile-menu"
@@ -168,7 +166,7 @@ const logos = [
 
                         <a
                             href="#contact"
-                            class="px-5 py-2.5 bg-brand-dark text-white rounded-full hover:bg-brand-blue transition-colors text-sm font-semibold"
+                            class="px-5 py-2.5 bg-brand-dark text-gray-900 rounded-full hover:bg-brand-blue transition-colors text-sm font-semibold"
                         >
                             Get in Touch
                         </a>
@@ -205,8 +203,7 @@ const logos = [
                     <div
                         class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold uppercase tracking-wider"
                     >
-                        <span
-                            class="w-2 h-2 rounded-full bg-white animate-ping"
+                        <span class="w-2 h-2 rounded-full bg-white animate-ping"
                         ></span>
                         Since 1990
                     </div>
@@ -262,7 +259,7 @@ const logos = [
                     class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
                 >
                     <div
-                        class="flex-shrink-0 w-full flex items-center justify-center gap-16 snap-center p-4"
+                        class="flex-shrink-0 w-full flex items-center justify-center gap-16 snap-center p-4 bg-slate-100"
                     >
                         {
                             logos
@@ -278,7 +275,7 @@ const logos = [
                     </div>
 
                     <div
-                        class="flex-shrink-0 w-full flex items-center justify-center gap-16 snap-center p-4"
+                        class="flex-shrink-0 w-full flex items-center justify-center gap-16 snap-center p-4 bg-slate-100"
                     >
                         {
                             logos
@@ -294,7 +291,7 @@ const logos = [
                     </div>
 
                     <div
-                        class="flex-shrink-0 w-full flex items-center justify-center gap-16 snap-center p-4"
+                        class="flex-shrink-0 w-full flex items-center justify-center gap-16 snap-center p-4 bg-slate-100"
                     >
                         {
                             logos
@@ -507,30 +504,39 @@ const logos = [
             <div
                 class="max-w-7xl mx-auto px-6 mb-12 flex items-end justify-between"
             >
-                <div>
-                    <span
-                        class="text-brand-blue font-semibold uppercase tracking-wider text-sm"
-                        >Case Studies</span
-                    >
-                    <h2 class="text-4xl font-bold text-brand-dark mt-2">
-                        Recent Work
-                    </h2>
-                </div>
-                <div class="hidden md:flex gap-2">
-                    <button
-                        class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all"
-                        ><i data-lucide="arrow-left" class="w-5 h-5"
-                        ></i></button
-                    >
-                    <button
-                        class="w-12 h-12 rounded-full border border-gray-800 bg-brand-dark text-white flex items-center justify-center hover:bg-gray-700 transition-all"
-                        ><i data-lucide="arrow-right" class="w-5 h-5"
-                        ></i></button
-                    >
+                <div class="w-full">
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <span
+                                class="text-brand-blue font-semibold uppercase tracking-wider text-sm"
+                                >Case Studies</span
+                            >
+                            <h2 class="text-4xl font-bold text-brand-dark mt-2">
+                                Recent Work
+                            </h2>
+                        </div>
+                        <div class="hidden md:flex gap-2">
+                            <button
+                                id="prev-project"
+                                class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all"
+                                ><i
+                                    data-lucide="arrow-left"
+                                    class="w-5 h-5 text-gray-800"></i></button
+                            >
+                            <button
+                                id="next-project"
+                                class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all"
+                                ><i
+                                    data-lucide="arrow-right"
+                                    class="w-5 h-5 text-gray-800"></i></button
+                            >
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div
+                id="projects-container"
                 class="flex overflow-x-auto gap-8 px-6 pb-12 snap-x max-w-7xl mx-auto scrollbar-hide"
             >
                 <!-- Project 1 -->
@@ -637,7 +643,10 @@ const logos = [
                         </p>
 
                         <div class="space-y-6">
-                            <div class="flex items-start gap-4">
+                            <a
+                                href="/en/contact/nuremberg/"
+                                class="flex items-start gap-4"
+                            >
                                 <div
                                     class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center shrink-0 text-brand-blue"
                                 >
@@ -653,8 +662,11 @@ const logos = [
                                         Head office at St. Lorenz Church
                                     </p>
                                 </div>
-                            </div>
-                            <div class="flex items-start gap-4">
+                            </a>
+                            <a
+                                href="/en/contact/munich/"
+                                class="flex items-start gap-4"
+                            >
                                 <div
                                     class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center shrink-0 text-brand-blue"
                                 >
@@ -670,8 +682,11 @@ const logos = [
                                         City office Kaufingerstrasse
                                     </p>
                                 </div>
-                            </div>
-                            <div class="flex items-start gap-4">
+                            </a>
+                            <a
+                                href="/en/contact/berlin/"
+                                class="flex items-start gap-4"
+                            >
                                 <div
                                     class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center shrink-0 text-brand-blue"
                                 >
@@ -687,7 +702,7 @@ const logos = [
                                         Capital office Charlottenburg
                                     </p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="relative">
@@ -959,8 +974,55 @@ const logos = [
                     // Initial check
                     updateCarouselButtons();
                 }
-            });
 
+                // Projects Carousel
+                const projectsContainer =
+                    document.getElementById("projects-container");
+                if (projectsContainer) {
+                    const prevButton = document.getElementById("prev-project");
+                    const nextButton = document.getElementById("next-project");
+
+                    const updateProjectButtons = () => {
+                        const atStart = projectsContainer.scrollLeft < 10;
+                        const atEnd =
+                            projectsContainer.scrollLeft +
+                                projectsContainer.clientWidth >=
+                            projectsContainer.scrollWidth - 10;
+                        prevButton.disabled = atStart;
+                        nextButton.disabled = atEnd;
+                    };
+
+                    nextButton.addEventListener("click", () => {
+                        const projectWidth =
+                            projectsContainer.querySelector(
+                                ".snap-center",
+                            ).clientWidth;
+                        projectsContainer.scrollBy({
+                            left: projectWidth + 32, // (32 = gap)
+                            behavior: "smooth",
+                        });
+                    });
+
+                    prevButton.addEventListener("click", () => {
+                        const projectWidth =
+                            projectsContainer.querySelector(
+                                ".snap-center",
+                            ).clientWidth;
+                        projectsContainer.scrollBy({
+                            left: -(projectWidth + 32),
+                            behavior: "smooth",
+                        });
+                    });
+
+                    projectsContainer.addEventListener(
+                        "scroll",
+                        updateProjectButtons,
+                        { passive: true },
+                    );
+
+                    updateProjectButtons();
+                }
+            });
             // Mobile Menu Toggle
             function toggleMenu() {
                 const menu = document.getElementById("mobile-menu");

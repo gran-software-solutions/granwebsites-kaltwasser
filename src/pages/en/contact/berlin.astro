@@ -1,0 +1,45 @@
+---
+import "../../../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kaltwasser Communication | Berlin</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/lucide@latest" defer></script>
+        <style>
+            .glass-panel {
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+            }
+        </style>
+    </head>
+    <body
+        class="bg-slate-100 text-slate-900 antialiased selection:bg-brand-blue selection:text-white"
+    >
+        <div class="py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-4xl font-bold text-brand-dark mb-4">
+                    Berlin
+                </h1>
+                <p class="text-lg text-gray-600">
+                    Placeholder page for Berlin office.
+                </p>
+            </div>
+        </div>
+        <script is:inline>
+            document.addEventListener("DOMContentLoaded", () => {
+                lucide.createIcons();
+            });
+        </script>
+    </body>
+</html>
